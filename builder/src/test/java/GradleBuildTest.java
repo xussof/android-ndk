@@ -31,10 +31,10 @@ import java.util.LinkedHashSet;
 import com.google.common.io.ByteStreams;
 
 @RunWith(Parameterized.class)
-public class GradleBuildTest {    
+public class GradleBuildTest {
   @Parameters(name="TestBuild{0}")
   public static Collection<String> data() {
-      LinkedHashSet<String> projects = new LinkedHashSet<String>(); 
+      LinkedHashSet<String> projects = new LinkedHashSet<String>();
       try {
 	  Repository repository = new FileRepositoryBuilder()
 	      .readEnvironment() // scan environment GIT_* variables
@@ -74,7 +74,7 @@ public class GradleBuildTest {
   private static boolean isProject(File f) {
       return f.isDirectory() && Arrays.asList(f.list()).containsAll(Arrays.asList("build.gradle", "app"));
   }
-    
+
   private File gradleProject;
   public GradleBuildTest(String projectDirectory) {
       this.gradleProject = new File("../" + projectDirectory);
@@ -87,14 +87,14 @@ public class GradleBuildTest {
       ProjectConnection connection = connector.connect();
       BuildLauncher launcher = connection.newBuild();
       launcher.setStandardOutput(System.out);
-      launcher.setStandardError(System.err);      
+      launcher.setStandardError(System.err);
       try {
-	  launcher.forTasks("app:lint");
+	//  launcher.forTasks("app:lint");
 	  launcher.run();
 	  launcher.forTasks("assembleDebug");
 	  launcher.run();
 	  launcher.forTasks("assembleRelease");
-	  launcher.run();	  
+	  launcher.run();
       } catch (BuildException e) {
 	  fail(String.format("BUILD FAILED: %s", e));
       } finally {

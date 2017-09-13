@@ -20,11 +20,7 @@ dependencies {
 }
 
 test {
-    lintOptions {
 
-        abortOnError false
-
-    }
     testLogging {
         exceptionFormat 'full'
         showStandardStreams = true
