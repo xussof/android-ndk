@@ -2,9 +2,12 @@ apply plugin: 'java'
 
 android {
 
-  lintOptions {
-    abortOnError true
+    lintOptions {
+
+        abortOnError false
+
     }
+
 }
 
 repositories {
