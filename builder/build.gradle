@@ -2,11 +2,7 @@ apply plugin: 'java'
 
 
 
-lintOptions {
 
-    abortOnError false
-
-}
 
 
 
@@ -15,6 +11,11 @@ repositories {
 }
 
 dependencies {
+    lintOptions {
+
+        abortOnError false
+
+    }
     compile 'org.gradle:gradle-tooling-api:+'
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'org.eclipse.jgit:org.eclipse.jgit:4.0.1.201506240215-r'
