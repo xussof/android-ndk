@@ -89,6 +89,7 @@ public class GradleBuildTest {
       launcher.setStandardOutput(System.out);
       launcher.setStandardError(System.err);
       try {
+  //byxussof da error
 	//  launcher.forTasks("app:lint");
 	  launcher.run();
 	  launcher.forTasks("assembleDebug");
