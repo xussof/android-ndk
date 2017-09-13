@@ -1,14 +1,14 @@
 apply plugin: 'java'
 
-android {
 
-    lintOptions {
 
-        abortOnError false
+lintOptions {
 
-    }
+    abortOnError false
 
 }
+
+
 
 repositories {
     jcenter()
