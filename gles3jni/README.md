@@ -1,7 +1,7 @@
 gles3jni
 =========
 gles3jni is an Android C++ sample that demonstrates how to use OpenGL ES 3.0 from JNI/native code.
-//test
+
 The OpenGL ES 3.0 rendering path uses a few new features compared to the
 OpenGL ES 2.0 path:
 - Instanced rendering and vertex attribute divisor to reduce the number of

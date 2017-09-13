@@ -329,7 +329,7 @@ void PrintTagVal(const char* printLabel, ACameraMetadata_const_entry& val) {
   for (int i = 0; i < val.count; ++i) {
     switch (val.type) {
       case ACAMERA_TYPE_INT32:
-        LOGI("%s %s: %08d", printLabel, name, val.data.i32[i]);
+        LOGI("%s %s: %08d s", printLabel, name, val.data.i32[i]);
         break;
       case ACAMERA_TYPE_BYTE:
         LOGI("%s %s: %#02x", printLabel, name, val.data.u8[i]);
