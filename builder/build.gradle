@@ -1,5 +1,12 @@
 apply plugin: 'java'
 
+android {
+
+  lintOptions {
+    abortOnError true
+    }
+}
+
 repositories {
     jcenter()
 }
